@@ -1,6 +1,6 @@
 
 const fs = require('fs')
-const data = JSON.parse(fs.readFileSync('../db.json', 'utf8'))
+const data = JSON.parse(fs.readFileSync('./db.json', 'utf8'))
 let db;
 
 // function Data (namee, passwordd) {
@@ -25,17 +25,18 @@ function getUser(name, password) {
 
     for (let i = 0; i < x; i++) {
         let v = user[i];
-        console.log(name)
-        console.log(v.name)
+        // console.log(name)
+        // console.log(v.name)
         
         if (name === v.name.toString() && password === v.password.toString()) {
             z = 'login successful';
-            console.log(" fkds ")
+            console.log("welcome" + v.name)
+            
             return z
         } 
         if (v.name !== name || v.password !== password){
             z = 'wrong details'
-            console.log(" fds ")
+            
             
         }
     }
@@ -63,5 +64,5 @@ function addMovie() {
 // }
 
 
-module.exports = getUser;
+exports.getUser = getUser;
 // module.exports = Data;

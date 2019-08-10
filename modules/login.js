@@ -1,5 +1,6 @@
 const inquirer = require('inquirer');
-const getuser = require('../dbReader');
+const {getUser} = require('../dbReader');
+const {services} = require('./services')
 const fs = require('fs')
 // const dataa = JSON.parse(fs.readFileSync('../d.json', 'utf8'))
 
@@ -34,14 +35,18 @@ function login() {
     .prompt(
       /* Pass your questions in here */
       questions
+     
     )
     .then(answers => {
       // Use user feedback for... whatever!!
       
       let name = answers.name
       let password = answers.password
-         let resp = getuser(name, password);
+         let resp = getUser(name, password);
          console.log(resp);
+         if (resp == 'login successful') {
+           services();
+         }
     });
 
 
@@ -50,6 +55,6 @@ function login() {
 
 // let resp = getuser(name, password, dataa);
 // console.log(resp);
-login();
+
 module.exports = login;
 

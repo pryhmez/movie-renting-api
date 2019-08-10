@@ -3,20 +3,22 @@
     {
       "name": "isaac",
       "password": "isaac",
-      "email": "isaac@gmail.com"
+      "email": "isaac@gmail.com",
+      "wallet": 6000
     },
     {
       "name": "prince",
       "password": "prince",
-      "email": "prince@gmail.com"
+      "email": "prince@gmail.com",
+      "wallet": 10000
     },
     {
       "name": "",
       "password": "",
-      "email": ""
+      "email": "",
+      "wallet": 4000
     }
   ],
-
   "movies": [
     {
       "title": "spiderman",
@@ -24,21 +26,18 @@
       "dateAdded": "22 05 6",
       "cost": "2000"
     },
-
     {
       "title": "ironman",
       "description": "fobnofbwpnbikwinbowinb:powenb",
       "dateAdded": "22 05 6",
       "cost": "3000"
     },
-
     {
       "title": "batman",
       "description": "fobnofbwpnbikwinbowinb:powenb",
       "dateAdded": "22 05 6",
       "cost": "1000"
     },
-
     {
       "title": "superman",
       "description": "fobnofbwpnbikwinbowinb:powenb",

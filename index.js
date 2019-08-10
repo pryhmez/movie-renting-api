@@ -1,12 +1,12 @@
 const inquirer = require('inquirer');
 const login = require('./modules/login.js');
-const signup = require('./modules/signup.js');
+// const {signup} = require('./modules/signup.js');
 
 let questions = [
     {type: 'list', 
     message: "Welcome please login or signup if you do not have an account", 
     name: 'framework', 
-    choices:["Login", "Signup",new inquirer.Separator(),new inquirer.Separator(), "Exit"]
+    choices:["Login", "Sign up",new inquirer.Separator(),new inquirer.Separator(), "Exit"]
     },
   
   ];
@@ -24,14 +24,16 @@ inquirer
   .then(answers => {
     // Use user feedback for... whatever!!
     
-       let resp = JSON.stringify(answers.framework, null, ' ')
-        console.log(resp);
+      //  let resp = JSON.stringify(answers.framework, null, ' ')
+       let resp = answers.framework
+        // console.log(resp);
         if(resp = "Login"){
             login();
-            console.log(resp)
+            // console.log(resp)
         }
-        if(resp = "Signup"){
-            // login();
+        if(resp = "Sign up"){
+         
+            // signup();
         }
         if(resp = "Exit"){
             // login();

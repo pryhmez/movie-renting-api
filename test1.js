@@ -1,33 +1,11 @@
-var inquirer = require('inquirer');
+var fs = require('fs');
+var fileName = './db.json';
+var file = require('./db.json');
 
-inquirer
-  .prompt([
-    {
-      type: 'list',
-      name: 'theme',
-      message: 'What do you want to do?',
-      choices: [
-        'Order a pizza',
-        'Make a reservation',
-        new inquirer.Separator(),
-        'Ask for opening hours',
-        {
-          name: 'Contact support',
-          disabled: 'Unavailable at this time'
-        },
-        'Talk to the receptionist'
-      ]
-    },
-    {
-      type: 'list',
-      name: 'size',
-      message: 'What size do you need?',
-      choices: ['Jumbo', 'Large', 'Standard', 'Medium', 'Small', 'Micro'],
-      filter: function(val) {
-        return val.toLowerCase();
-      }
-    }
-  ])
-  .then(answers => {
-    console.log(JSON.stringify(answers.theme, null, '  '));
+file.users[0].name = "new value";
+
+fs.writeFile(fileName, JSON.stringify(file), function (err) {
+  if (err) return console.log(err);
+  console.log(JSON.stringify(file));
+  console.log('writing to ' + fileName);
 });
