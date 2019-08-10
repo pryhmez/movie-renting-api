@@ -1,0 +1,49 @@
+{
+  "users": [
+    {
+      "name": "isaac",
+      "password": "isaac",
+      "email": "isaac@gmail.com"
+    },
+    {
+      "name": "prince",
+      "password": "prince",
+      "email": "prince@gmail.com"
+    },
+    {
+      "name": "",
+      "password": "",
+      "email": ""
+    }
+  ],
+
+  "movies": [
+    {
+      "title": "spiderman",
+      "description": "fobnofbwpnbikwinbowinb:powenb",
+      "dateAdded": "22 05 6",
+      "cost": "2000"
+    },
+
+    {
+      "title": "ironman",
+      "description": "fobnofbwpnbikwinbowinb:powenb",
+      "dateAdded": "22 05 6",
+      "cost": "3000"
+    },
+
+    {
+      "title": "batman",
+      "description": "fobnofbwpnbikwinbowinb:powenb",
+      "dateAdded": "22 05 6",
+      "cost": "1000"
+    },
+
+    {
+      "title": "superman",
+      "description": "fobnofbwpnbikwinbowinb:powenb",
+      "dateAdded": "22 05 6",
+      "cost": "4000"
+    }
+  ]
+}
